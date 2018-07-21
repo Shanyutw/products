@@ -1,7 +1,7 @@
 import os	# operating system
 
 products = []
-if os.path.isfile('products.csv'):	# 尋找資料夾內是否有這""檔案
+if os.path.isfile('products.csv'):	# 尋找是否有這""檔案
 	print('yes')
 	#讀取檔案
 	with open('products.cev', 'r') as f:
