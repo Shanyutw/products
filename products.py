@@ -1,11 +1,17 @@
-# 讀取檔案
+import os	# operating system
+
 products = []
-with open('products.cev', 'r') as f:
+if os.path.isfile('products.csv'):	# 尋找資料夾內是否有這""檔案
+	print('yes')
+	#讀取檔案
+	with open('products.cev', 'r') as f:
 	for line in f:
 		if '商品,價格' in line:
 			continue	#繼續(跳過，跳到下一迴)
 		name, price = line.strip().split(',')	#split切割  用逗點做分割
 		products.append([name, price])
+else:
+	print('Not found')	
 
 #讓使用者輸入
 while  True:
